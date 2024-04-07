@@ -1,0 +1,41 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.nav2 {
+  display: none;
+}
+.nav1 {
+  display: flex;
+}
+.nav1 a {
+  display: flex;
+}
+
+@media screen and (max-width: 600px) {
+  .nav2 {
+    display: none;
+    
+  }
+  .nav1 {
+    display: none;
+  }
+  .nav2 a {
+    margin: 10px;
+  }
+
+  .item-flex {
+    grid-template-columns: repeat(2, 1fr);
+  }
+} 
+
+.item-flex {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media screen and (max-width: 768px) {
+  .item-flex {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
