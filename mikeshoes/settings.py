@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-c@a9!=yo5v%*s*c%2gac)k4xwr3_0^4ih*1-t8^16xiqeyzke4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'mikeshoes.onrender.com']
 
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'cart',
     'tailwind',
     'theme',
-    'django_browser_reload',
+    
 ]
 
 TAILWIND_APP_NAME = 'theme'
@@ -62,7 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "django_browser_reload.middleware.BrowserReloadMiddleware",
+    
 ]
 
 ROOT_URLCONF = 'mikeshoes.urls'
