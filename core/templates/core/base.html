@@ -20,8 +20,9 @@
         
         <a href='/' class='text-x font-semibold'>Mike's Shoes</a>
         <div class='space-x-6 nav1 flex'>
-            <div><a href="{% url 'item:items' %}" class='text-lg font-semibold hover:text-gray-500 '>Browse</a></div>
+            
             {% if request.user.is_authenticated %}
+            <div><a href="{% url 'item:items' %}" class='text-lg font-semibold hover:text-gray-500 '>Browse</a></div>
             {% if user.is_authenticated and user.is_staff %}
                 <span><a href="{% url 'item:new' %}" class='text-lg font-semibold hover:text-lime-900'>New</a></span>
             {% endif %}
@@ -30,7 +31,7 @@
                 <span><a href="{% url 'core:logout' %}" class='px-3 py-2 md:px-6 md:py-4 text-lg font-semibold bg-red-500 text-white rounded-xl hover:bg-red-700'>Logout</a></span>
 
             {% else %}
-                <span><a href="{% url 'core:signup' %}" class='px-3 py-2 md:px-6 md:py-4 text-lg font-semibold bg-violet-700 text-white rounded-xl hover:bg-teal-700'>Sign Up</a></span>
+                <span><a href="{% url 'core:signup' %}" class=' px-3 py-2 md:px-6 md:py-4 text-lg font-semibold bg-violet-700 text-white rounded-xl hover:bg-teal-700'>Sign Up</a></span>
                 <span><a href="{% url 'core:login' %}" class='px-3 py-2 md:px-6 md:py-4 text-lg font-semibold bg-violet-700 text-white rounded-xl hover:bg-gray-700'>Log in</a></span>
             {% endif %}
             
